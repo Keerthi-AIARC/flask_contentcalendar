@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Media Content Calendar Generator</title>
+</head>
+<body>
+    <h1>📅 Social Media Content Calendar Generator</h1>
+    <form method="POST">
+        <label>Business Category:</label>
+        <select name="biz_type">
+            {% for key in hashtags.keys() %}
+            <option value="{{ key }}">{{ key }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Target Audience:</label>
+        <input type="text" name="audience" value="Millennials"><br><br>
+
+        <label>Content Goal:</label>
+        <select name="goal">
+            <option>Engagement</option>
+            <option>Awareness</option>
+            <option>Sales</option>
+        </select><br><br>
+
+        <label>Number of Posts:</label>
+        <input type="number" name="num_posts" min="1" max="30" value="7"><br><br>
+
+        <button type="submit">Generate Calendar</button>
+    </form>
+</body>
+</html>
